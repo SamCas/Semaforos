@@ -35,8 +35,7 @@ def main():
     semaforo_prueba = TrafficLight()
     lane_prueba = LaneQueue()
 
-    # print(lane_prueba.lane_fill())
     print(lane_prueba.lane_randomfill())
-    #semaforo_prueba.light_change()
+    print(semaforo_prueba.light_change())
 
 main()
