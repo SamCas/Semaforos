@@ -1,7 +1,7 @@
 from queue import *
 from random import *
 from timeit import default_timer
-from tkinter import *
+
 
 ciclo_total = 120
 semaforo = {1:"Norte",2:"Sur",3:"Este",4:"Oeste"}
@@ -35,24 +35,15 @@ class TrafficLight(object):
             if count_down <= 58:
                 print[state_change['red'], count_down]
 
-    def test(self):
-        for count_down in range(ciclo_total, 0, -1):
-            print(count_down)
-
 def main():
     semaforo_prueba = TrafficLight()
     lane_prueba = LaneQueue()
-    root =  Tk()
-    T = Text(root, height=30, width=30)
-    T.pack()
 
-    # clock_start = default_timer()
-    # print(lane_prueba.lane_randomfill())
-    # print(semaforo_prueba.light_change())
-    T.insert(END, semaforo_prueba.test())
-    mainloop()
-    # clock_end = default_timer()
-    # print("This took %s seconds." %(clock_end - clock_start))
+    clock_start = default_timer()
+    print(lane_prueba.lane_randomfill())
+    print(semaforo_prueba.light_change
+    clock_end = default_timer()
+    print("This took %s seconds." %(clock_end - clock_start))
 
 
 main()
